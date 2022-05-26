@@ -10,6 +10,11 @@ public class XmlDriver implements IDataDriver {
 
     @Override
     public void write(String fileName, String content) {
-        System.out.println(fileName + " Wrote");
+        System.out.println(fileName + " Wrote " + "in " + content);
+    }
+
+    @Override
+    public String getUsers(String fileName) {
+        return  ("XML users");
     }
 }
