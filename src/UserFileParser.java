@@ -1,21 +1,12 @@
-import factory.CsvDriver;
-import factory.XmlDriver;
+import factory.*;
 
 public class UserFileParser {
-    public UserFileParser(){};
-
-    private CsvDriver createCsvDriver() {
-        return new CsvDriver();
+    private Creator creator;
+    public UserFileParser(Creator creator){
+        this.creator = creator;
     }
-    public String getUsersCsv(String path) {
-        CsvDriver csv = createCsvDriver();
-        return csv.read(path);
-    }
-    private XmlDriver createXmlDriver() {
-        return new XmlDriver();
-    }
-    public String getUsersXml(String path) {
-        XmlDriver xml = createXmlDriver();
-        return xml.read(path);
+    public String getUsers(String path) {
+        IDataDriver dataDriver = this.creator.createDatadriver();
+        return dataDriver.read(path);
     }
 }
