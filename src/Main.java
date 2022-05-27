@@ -1,11 +1,11 @@
-import factory.Creator;
+import factory.ICreator;
 import factory.CreatorCsv;
 import factory.CreatorXml;
 
 public class Main {
     public static void main(String[] args) {
-        Creator csv = new CreatorCsv();
-        Creator xml = new CreatorXml();
+        ICreator csv = new CreatorCsv();
+        ICreator xml = new CreatorXml();
 
         UserFileParser parseCsv = new UserFileParser(csv);
         System.out.println(parseCsv.getUsers("/path/files/Csv/file.csv"));

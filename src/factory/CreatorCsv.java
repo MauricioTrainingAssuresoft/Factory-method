@@ -1,8 +1,6 @@
 package factory;
 
-import factory.Creator;
-
-public class CreatorCsv extends Creator {
+public class CreatorCsv implements ICreator {
     @Override
     public IDataDriver createDatadriver() {
         return new CsvDriver();

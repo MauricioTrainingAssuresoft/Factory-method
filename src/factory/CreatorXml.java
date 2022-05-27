@@ -1,6 +1,6 @@
 package factory;
 
-public class CreatorXml extends Creator {
+public class CreatorXml implements ICreator {
     @Override
     public IDataDriver createDatadriver() {
         return new XmlDriver();

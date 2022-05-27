@@ -1,8 +1,8 @@
 import factory.*;
 
 public class UserFileParser {
-    private Creator creator;
-    public UserFileParser(Creator creator){
+    private ICreator creator;
+    public UserFileParser(ICreator creator){
         this.creator = creator;
     }
     public String getUsers(String path) {
