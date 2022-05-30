@@ -1,9 +1,13 @@
 package factory;
 
-public class CsvDriver implements IDataDriver{
+import factory.IDataDriver;
+
+public class XmlDriver implements IDataDriver {
+    Logger loger = Logger.getInstance();
     @Override
     public String read(String fileName) {
-        return "Jose, Mauricio, Alex,Jonathan, Melissa... Read from " + fileName;
+        loger.info();
+        return "Ana, Carlos, Juan ... Read from " + fileName;
     }
 
     @Override

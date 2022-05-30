@@ -1,6 +1,7 @@
 import factory.ICreator;
 import factory.CreatorCsv;
 import factory.CreatorXml;
+import factory.Logger;
 
 public class Main {
     public static void main(String[] args) {
